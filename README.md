@@ -33,6 +33,10 @@ MIT 6.092 is designed to help students develop basic programming skills and lear
 - Experience with object-oriented programming principles
 - Problem-solving skills through practical coding exercises
 
+## Learning Resources
+- [MIT OCW 6.092 Course Materials](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-092-introduction-to-programming-in-java-january-iap-2010/)
+- [Oracle's Java Tutorials](https://docs.oracle.com/javase/tutorial/)
+  
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
