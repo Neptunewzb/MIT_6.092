@@ -1,6 +1,55 @@
 public class Library {
     // Add the missing implementation to this class
+    private String address;
+    private Book[] collection;
+    private int book_num = 0;
 
+    public Library(String address_){
+        address = address_;
+        collection = new Book[10];
+    }
+
+    public void addBook(Book book){
+        collection[book_num] = book;
+        //System.out.println(collection[book_num]);
+        book_num++;
+    }
+
+    public static void printOpeningHours(){
+        System.out.println("All libraries have the same opening hours: 9 AM to 5 PM daily.");
+    }
+    public void printAddress(){
+        System.out.println("This library is located at " + address );
+    }
+
+    public void borrowBook(String book){
+        for (int i = 0; i <= book_num-1 ; i++){
+            if (collection[i].title == book){
+                collection[i].borrowed = true;
+                return;
+            }
+        }
+    }
+    public void returnBook(String book){
+        for (int i = 0; i <= book_num-1 ; i++){
+            if (collection[i].title == book){
+                collection[i].borrowed = false;
+                return;
+            }
+        }
+    }
+    public void printAvailableBooks(){
+        int flag = 0;
+        for (int i = 0; i <= book_num-1 ; i++){
+            if (collection[i].borrowed == false){
+                System.out.println(collection[i].title);
+                flag = 1;
+            }
+        }
+        if (flag == 0){
+            System.out.println("None");
+        }
+    }
     public static void main(String[] args) {
         // Create two libraries
         Library firstLibrary = new Library("10 Main St.");
