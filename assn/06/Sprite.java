@@ -1,15 +1,30 @@
-import java.awt.Graphics;
-
+/**
+ * Sprite interface for drawable objects
+ * Provides methods for drawing and determining object dimensions
+ */
 public interface Sprite {
     /**
-     * Draws this sprite on surface, with the coordinate (leftX, topY) as the
-     * top left corner.
+     * Draws this sprite on the surface
      */
-    void draw(Graphics surface, int leftX, int topY);
-
-    /** Returns the width of the sprite. */
-    int getWidth();
-
-    /** Returns the height of the sprite. */
-    int getHeight();
+    public void draw(java.awt.Graphics surface);
+    
+    /**
+     * Returns the width of this sprite
+     */
+    public int getWidth();
+    
+    /**
+     * Returns the height of this sprite
+     */
+    public int getHeight();
+    
+    /**
+     * Returns the x position of this sprite
+     */
+    public int getX();
+    
+    /**
+     * Returns the y position of this sprite
+     */
+    public int getY();
 }
